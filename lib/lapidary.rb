@@ -13,7 +13,7 @@ module Lapidary
     if @logger.nil?
       @logger = (rails_logger || default_logger)
       @logger.formatter = proc { |severity, datetime, progname, msg|
-        datetime.strftime("[%Y-%m-%d %H:%M:%S](#{severity})#{msg}\n")
+        datetime.strftime("[%Y-%m-%d %H:%M:%S](#{severity}) #{msg}\n")
       }
     end
     return @logger
