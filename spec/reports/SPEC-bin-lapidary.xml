@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite skipped="0" errors="0" tests="1" name="bin/lapidary" time="2.715619" failures="0">
+  <testcase name="bin/lapidary should create valid gem template" time="2.71509">
+  </testcase>
+  <system-out>
+  </system-out>
+  <system-err>
+  </system-err>
+</testsuite>

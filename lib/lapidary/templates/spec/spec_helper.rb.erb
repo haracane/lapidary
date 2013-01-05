@@ -1,0 +1,40 @@
+if RUBY_VERSION <= '1.8.7'
+else
+  require "simplecov"
+  require "simplecov-rcov"
+  SimpleCov.formatter = SimpleCov::Formatter::RcovFormatter
+  SimpleCov.start
+end
+
+$LOAD_PATH.unshift(File.join(File.dirname(__FILE__), "..", "lib"))
+$LOAD_PATH.unshift(File.dirname(__FILE__))
+require "rspec"
+require "<%=@project_name%>"
+require "tempfile"
+
+# Requires supporting files with custom matchers and macros, etc,
+# in ./support/ and its subdirectories.
+Dir["#{File.dirname(__FILE__)}/support/**/*.rb"].each {|f| require f}
+
+RSpec.configure do |config|
+  
+end
+
+module <%=@module_name%>
+  <%=@project_name.upcase%>_HOME = File.expand_path(File.dirname(__FILE__) + "/..")
+  BIN_DIR = "#{<%=@project_name.upcase%>_HOME}/bin"
+  LIB_DIR = "#{<%=@project_name.upcase%>_HOME}/lib"
+  RUBY_CMD = "/usr/bin/env ruby -I #{LIB_DIR}"
+  REDIRECT = {}
+end
+
+<%=@module_name%>.logger = Logger.new(STDERR)
+if File.exist?('/tmp/<%=@project_name%>.debug') then
+  <%=@module_name%>.logger.level = Logger::DEBUG
+  <%=@module_name%>::REDIRECT[:stdout] = nil
+  <%=@module_name%>::REDIRECT[:stderr] = nil
+else
+  <%=@module_name%>.logger.level = Logger::ERROR
+  <%=@module_name%>::REDIRECT[:stdout] = "> /dev/null"
+  <%=@module_name%>::REDIRECT[:stderr] = "2> /dev/null"
+end
