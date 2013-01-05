@@ -5,11 +5,11 @@
 
 Gem::Specification.new do |s|
   s.name = "lapidary"
-  s.version = "0.0.7"
+  s.version = "0.1.0"
 
   s.required_rubygems_version = Gem::Requirement.new(">= 0") if s.respond_to? :required_rubygems_version=
   s.authors = ["Kenji Hara"]
-  s.date = "2013-01-02"
+  s.date = "2013-01-05"
   s.description = "Helper for creating RubyGem project"
   s.email = "haracane@gmail.com"
   s.executables = ["lapidary"]
@@ -42,6 +42,8 @@ Gem::Specification.new do |s|
     "lib/lapidary/templates/spec/spec_helper.rb.erb",
     "spec/bin/lapidary_spec.rb",
     "spec/lib/lapidary_spec.rb",
+    "spec/reports/SPEC-Lapidary.xml",
+    "spec/reports/SPEC-bin-lapidary.xml",
     "spec/spec_helper.rb"
   ]
   s.homepage = "http://github.com/haracane/lapidary"
@@ -58,8 +60,7 @@ Gem::Specification.new do |s|
       s.add_development_dependency(%q<rdoc>, ["~> 3.12"])
       s.add_development_dependency(%q<bundler>, [">= 1.0.0"])
       s.add_development_dependency(%q<jeweler>, ["~> 1.8.4"])
-      s.add_development_dependency(%q<simplecov>, [">= 0"])
-      s.add_development_dependency(%q<simplecov-rcov>, [">= 0"])
+      s.add_development_dependency(%q<rcov>, [">= 0"])
       s.add_development_dependency(%q<ci_reporter>, [">= 1.7.0"])
       s.add_development_dependency(%q<flog>, [">= 3.2.0"])
     else
@@ -67,8 +68,7 @@ Gem::Specification.new do |s|
       s.add_dependency(%q<rdoc>, ["~> 3.12"])
       s.add_dependency(%q<bundler>, [">= 1.0.0"])
       s.add_dependency(%q<jeweler>, ["~> 1.8.4"])
-      s.add_dependency(%q<simplecov>, [">= 0"])
-      s.add_dependency(%q<simplecov-rcov>, [">= 0"])
+      s.add_dependency(%q<rcov>, [">= 0"])
       s.add_dependency(%q<ci_reporter>, [">= 1.7.0"])
       s.add_dependency(%q<flog>, [">= 3.2.0"])
     end
@@ -77,8 +77,7 @@ Gem::Specification.new do |s|
     s.add_dependency(%q<rdoc>, ["~> 3.12"])
     s.add_dependency(%q<bundler>, [">= 1.0.0"])
     s.add_dependency(%q<jeweler>, ["~> 1.8.4"])
-    s.add_dependency(%q<simplecov>, [">= 0"])
-    s.add_dependency(%q<simplecov-rcov>, [">= 0"])
+    s.add_dependency(%q<rcov>, [">= 0"])
     s.add_dependency(%q<ci_reporter>, [">= 1.7.0"])
     s.add_dependency(%q<flog>, [">= 3.2.0"])
   end
