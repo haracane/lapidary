@@ -1,7 +1,7 @@
 = Lapidary
 
 Lapidary is a RubyGem project support tool.
-Faset mainly supports:
+Lapidary mainly supports:
 * RubyGem management and release based on {Jeweler}[https://github.com/technicalpickles/jeweler]
 * RubyGem scaffold generation based on {Jeweler}[https://github.com/technicalpickles/jeweler]
 * Behaviour driven development with {RSpec}[https://github.com/dchelimsky/rspec]
