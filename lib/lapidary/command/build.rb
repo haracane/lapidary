@@ -57,7 +57,7 @@ module Lapidary
           ".rspec",
           "Gemfile",
           "LICENSE.txt",
-          "README.rdoc",
+          "README.md",
           "Rakefile",
           "bin/project",
           "lib/project.rb",
