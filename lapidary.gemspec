@@ -5,24 +5,24 @@
 
 Gem::Specification.new do |s|
   s.name = "lapidary"
-  s.version = "0.1.2"
+  s.version = "0.2.0"
 
   s.required_rubygems_version = Gem::Requirement.new(">= 0") if s.respond_to? :required_rubygems_version=
   s.authors = ["Kenji Hara"]
-  s.date = "2013-01-05"
+  s.date = "2013-01-12"
   s.description = "Helper for creating RubyGem project"
   s.email = "haracane@gmail.com"
   s.executables = ["lapidary"]
   s.extra_rdoc_files = [
     "LICENSE.txt",
-    "README.rdoc"
+    "README.md"
   ]
   s.files = [
     ".document",
     ".rspec",
     "Gemfile",
     "LICENSE.txt",
-    "README.rdoc",
+    "README.md",
     "Rakefile",
     "VERSION",
     "bin/lapidary",
@@ -34,7 +34,7 @@ Gem::Specification.new do |s|
     "lib/lapidary/templates/.rspec.erb",
     "lib/lapidary/templates/Gemfile.erb",
     "lib/lapidary/templates/LICENSE.txt.erb",
-    "lib/lapidary/templates/README.rdoc.erb",
+    "lib/lapidary/templates/README.md.erb",
     "lib/lapidary/templates/Rakefile.erb",
     "lib/lapidary/templates/bin/project.erb",
     "lib/lapidary/templates/lib/project.rb.erb",
@@ -42,8 +42,6 @@ Gem::Specification.new do |s|
     "lib/lapidary/templates/spec/spec_helper.rb.erb",
     "spec/bin/lapidary_spec.rb",
     "spec/lib/lapidary_spec.rb",
-    "spec/reports/SPEC-Lapidary.xml",
-    "spec/reports/SPEC-bin-lapidary.xml",
     "spec/spec_helper.rb"
   ]
   s.homepage = "http://github.com/haracane/lapidary"
@@ -56,30 +54,39 @@ Gem::Specification.new do |s|
     s.specification_version = 3
 
     if Gem::Version.new(Gem::VERSION) >= Gem::Version.new('1.2.0') then
-      s.add_runtime_dependency(%q<rspec>, [">= 2.8.0"])
+      s.add_runtime_dependency(%q<rspec>, ["~> 2.12.0"])
+      s.add_runtime_dependency(%q<yard>, ["~> 0.8.3"])
+      s.add_runtime_dependency(%q<redcarpet>, ["~> 2.2.2"])
       s.add_runtime_dependency(%q<rdoc>, ["~> 3.12"])
-      s.add_runtime_dependency(%q<bundler>, [">= 1.0.0"])
+      s.add_runtime_dependency(%q<bundler>, ["~> 1.2.3"])
       s.add_runtime_dependency(%q<jeweler>, ["~> 1.8.4"])
-      s.add_runtime_dependency(%q<rcov>, [">= 0"])
-      s.add_runtime_dependency(%q<ci_reporter>, [">= 1.7.0"])
-      s.add_runtime_dependency(%q<flog>, [">= 3.2.0"])
+      s.add_runtime_dependency(%q<simplecov>, ["~> 0.7.1"])
+      s.add_runtime_dependency(%q<simplecov-rcov>, ["~> 0.2.3"])
+      s.add_runtime_dependency(%q<ci_reporter>, ["~> 1.8.3"])
+      s.add_runtime_dependency(%q<flog>, ["~> 3.2.1"])
     else
-      s.add_dependency(%q<rspec>, [">= 2.8.0"])
+      s.add_dependency(%q<rspec>, ["~> 2.12.0"])
+      s.add_dependency(%q<yard>, ["~> 0.8.3"])
+      s.add_dependency(%q<redcarpet>, ["~> 2.2.2"])
       s.add_dependency(%q<rdoc>, ["~> 3.12"])
-      s.add_dependency(%q<bundler>, [">= 1.0.0"])
+      s.add_dependency(%q<bundler>, ["~> 1.2.3"])
       s.add_dependency(%q<jeweler>, ["~> 1.8.4"])
-      s.add_dependency(%q<rcov>, [">= 0"])
-      s.add_dependency(%q<ci_reporter>, [">= 1.7.0"])
-      s.add_dependency(%q<flog>, [">= 3.2.0"])
+      s.add_dependency(%q<simplecov>, ["~> 0.7.1"])
+      s.add_dependency(%q<simplecov-rcov>, ["~> 0.2.3"])
+      s.add_dependency(%q<ci_reporter>, ["~> 1.8.3"])
+      s.add_dependency(%q<flog>, ["~> 3.2.1"])
     end
   else
-    s.add_dependency(%q<rspec>, [">= 2.8.0"])
+    s.add_dependency(%q<rspec>, ["~> 2.12.0"])
+    s.add_dependency(%q<yard>, ["~> 0.8.3"])
+    s.add_dependency(%q<redcarpet>, ["~> 2.2.2"])
     s.add_dependency(%q<rdoc>, ["~> 3.12"])
-    s.add_dependency(%q<bundler>, [">= 1.0.0"])
+    s.add_dependency(%q<bundler>, ["~> 1.2.3"])
     s.add_dependency(%q<jeweler>, ["~> 1.8.4"])
-    s.add_dependency(%q<rcov>, [">= 0"])
-    s.add_dependency(%q<ci_reporter>, [">= 1.7.0"])
-    s.add_dependency(%q<flog>, [">= 3.2.0"])
+    s.add_dependency(%q<simplecov>, ["~> 0.7.1"])
+    s.add_dependency(%q<simplecov-rcov>, ["~> 0.2.3"])
+    s.add_dependency(%q<ci_reporter>, ["~> 1.8.3"])
+    s.add_dependency(%q<flog>, ["~> 3.2.1"])
   end
 end
 
