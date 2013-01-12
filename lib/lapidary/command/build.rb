@@ -1,6 +1,12 @@
 module Lapidary
+  # Lapidary sub-commands
   module Command
+    # Rubygem builder command
     module Build
+      # Rubygem generator method
+      #
+      # This method generates a new Rubygem project
+      # @param argv [Array] command-line arguments
       def self.run(argv)
         @user_name = `/usr/bin/env git config --get user.name`.chomp
         @user_email = `/usr/bin/env git config --get user.email`.chomp
