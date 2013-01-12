@@ -27,7 +27,7 @@ You can install lapidary by gem.
 ## Usage
 
 ### scaffold new RubyGem project
-    $ lapidary hello-gem
+    $ lapidary mygem
 
 ### run rspec
     $ rake spec
@@ -53,6 +53,12 @@ This task also measure the code coverage in Ruby 1.9.2/1.9.3.
 
 ### build gem
     $ rake build
+
+### create document using YARD
+    $ rake yard
+
+### create document using RDoc
+    $ rake rdoc
 
 ### release gem to RubyGems.org
     $ rake release
