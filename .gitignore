@@ -2,6 +2,9 @@
 coverage
 coverage.data
 
+# ci_reporter generated
+spec/reports
+
 # rdoc generated
 rdoc
 
@@ -48,5 +51,6 @@ pkg
 # For rubinius:
 #*.rbc
 
+# For bundler:
 Gemfile.lock
 
