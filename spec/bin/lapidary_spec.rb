@@ -7,7 +7,7 @@ describe "bin/lapidary" do
   end
   
   it "should create valid gem template" do
-    work_dir = "/home/#{ENV["USER"]}/git"
+    work_dir = "#{ENV["HOME"]}/git"
     if ! FileTest.exists?(work_dir)
       Dir.mkdir(work_dir)
     end
@@ -16,7 +16,7 @@ describe "bin/lapidary" do
         result = system("rm -rf lapidary_test")
         result.should be_true
       end
-      system("#{Lapidary::RUBY_CMD} #{Lapidary::BIN_DIR}/lapidary --test lapidary_test #{@stdout_redirect} #{@stderr_redirect}").should be_true
+      system("ruby -I #{Lapidary::LAPIDARY_HOME}/lib #{Lapidary::LAPIDARY_HOME}/bin/lapidary --test lapidary_test #{@stdout_redirect} #{@stderr_redirect}").should be_true
       Dir.chdir("lapidary_test"){
         result = system("rake spec spec:rcov yard #{@stdout_redirect} #{@stderr_redirect}")
         result.should be_true
