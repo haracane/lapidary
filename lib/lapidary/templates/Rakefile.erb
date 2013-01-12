@@ -25,6 +25,7 @@ Jeweler::Tasks.new do |gem|
 end
 Jeweler::RubygemsDotOrgTasks.new
 
+## RSpec
 require "rspec/core"
 require "rspec/core/rake_task"
 RSpec::Core::RakeTask.new(:spec) do |spec|
@@ -36,20 +37,29 @@ RSpec::Core::RakeTask.new(:rcov) do |spec|
   spec.rcov = true
 end
 
-task :default => :spec
-
+## RDoc
 require "rdoc/task"
 Rake::RDocTask.new do |rdoc|
   version = File.exist?("VERSION") ? File.read("VERSION") : ""
-
   rdoc.rdoc_dir = "rdoc"
-  rdoc.title = "<%=@project_name%> #{version}"
+  rdoc.title = "lapidary #{version}"
   rdoc.rdoc_files.include("README*")
   rdoc.rdoc_files.include("lib/**/*.rb")
 end
 
-require "ci/reporter/rake/rspec"     # use this if you're using RSpec
+## YARD
+require 'yard'
+require 'yard/rake/yardoc_task'
+YARD::Rake::YardocTask.new do |t|
+  t.files   = ['app/controllers/**/*.rb','app/helpers/**/*.rb', 'app/mailers/**/*.rb', 'app/models/**/*.rb', 'lib/**/*.rb']
+  t.options = []
+  t.options << '--debug' << '--verbose' if $trace
+end
 
+# CI::Reporter
+require "ci/reporter/rake/rspec"
+
+## RCov
 if RUBY_VERSION <= '1.8.7'
   require "rcov"
   RSpec::Core::RakeTask.new("spec:rcov") do |t|
@@ -63,3 +73,4 @@ else
   end
 end
 
+task :default => :spec
