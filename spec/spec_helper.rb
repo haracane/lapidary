@@ -17,14 +17,10 @@ require "tempfile"
 Dir["#{File.dirname(__FILE__)}/support/**/*.rb"].each {|f| require f}
 
 RSpec.configure do |config|
-  
 end
 
 module Lapidary
   LAPIDARY_HOME = File.expand_path(File.dirname(__FILE__) + "/..")
-  BIN_DIR = "#{LAPIDARY_HOME}/bin"
-  LIB_DIR = "#{LAPIDARY_HOME}/lib"
-  RUBY_CMD = "ruby -I #{LIB_DIR}"
   REDIRECT = {}
 end
 
