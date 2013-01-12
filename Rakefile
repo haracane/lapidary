@@ -48,19 +48,19 @@ Rake::RDocTask.new do |rdoc|
 end
 
 ## YARD
-require 'yard'
-require 'yard/rake/yardoc_task'
+require "yard"
+require "yard/rake/yardoc_task"
 YARD::Rake::YardocTask.new do |t|
-  t.files   = ['app/controllers/**/*.rb','app/helpers/**/*.rb', 'app/mailers/**/*.rb', 'app/models/**/*.rb', 'lib/**/*.rb']
+  t.files   = ["lib/**/*.rb"]
   t.options = []
-  t.options << '--debug' << '--verbose' if $trace
+  t.options << "--debug" << "--verbose" if $trace
 end
 
 # CI::Reporter
 require "ci/reporter/rake/rspec"
 
 ## RCov
-if RUBY_VERSION <= '1.8.7'
+if RUBY_VERSION <= "1.8.7"
   require "rcov"
   RSpec::Core::RakeTask.new("spec:rcov") do |t|
     t.rcov = true
