@@ -5,11 +5,11 @@
 
 Gem::Specification.new do |s|
   s.name = "lapidary"
-  s.version = "0.2.2"
+  s.version = "0.2.3"
 
   s.required_rubygems_version = Gem::Requirement.new(">= 0") if s.respond_to? :required_rubygems_version=
   s.authors = ["Kenji Hara"]
-  s.date = "2013-01-12"
+  s.date = "2013-01-14"
   s.description = "Helper for creating RubyGem project"
   s.email = "haracane@gmail.com"
   s.executables = ["lapidary"]
@@ -60,7 +60,8 @@ Gem::Specification.new do |s|
       s.add_runtime_dependency(%q<rdoc>, ["~> 3.12"])
       s.add_runtime_dependency(%q<bundler>, ["~> 1.2.3"])
       s.add_runtime_dependency(%q<jeweler>, ["~> 1.8.4"])
-      s.add_runtime_dependency(%q<rcov>, ["~> 1.0.0"])
+      s.add_runtime_dependency(%q<simplecov>, ["~> 0.7.1"])
+      s.add_runtime_dependency(%q<simplecov-rcov>, ["~> 0.2.3"])
       s.add_runtime_dependency(%q<ci_reporter>, ["~> 1.8.3"])
       s.add_runtime_dependency(%q<flog>, ["~> 3.2.1"])
     else
@@ -70,7 +71,8 @@ Gem::Specification.new do |s|
       s.add_dependency(%q<rdoc>, ["~> 3.12"])
       s.add_dependency(%q<bundler>, ["~> 1.2.3"])
       s.add_dependency(%q<jeweler>, ["~> 1.8.4"])
-      s.add_dependency(%q<rcov>, ["~> 1.0.0"])
+      s.add_dependency(%q<simplecov>, ["~> 0.7.1"])
+      s.add_dependency(%q<simplecov-rcov>, ["~> 0.2.3"])
       s.add_dependency(%q<ci_reporter>, ["~> 1.8.3"])
       s.add_dependency(%q<flog>, ["~> 3.2.1"])
     end
@@ -81,7 +83,8 @@ Gem::Specification.new do |s|
     s.add_dependency(%q<rdoc>, ["~> 3.12"])
     s.add_dependency(%q<bundler>, ["~> 1.2.3"])
     s.add_dependency(%q<jeweler>, ["~> 1.8.4"])
-    s.add_dependency(%q<rcov>, ["~> 1.0.0"])
+    s.add_dependency(%q<simplecov>, ["~> 0.7.1"])
+    s.add_dependency(%q<simplecov-rcov>, ["~> 0.2.3"])
     s.add_dependency(%q<ci_reporter>, ["~> 1.8.3"])
     s.add_dependency(%q<flog>, ["~> 3.2.1"])
   end
