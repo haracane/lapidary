@@ -8,7 +8,7 @@ describe "bin/lapidary" do
   end
   
   it "should create valid gem template" do
-    work_dir = "#{ENV["HOME"]}/git"
+    work_dir = "#{ENV["HOME"]}/.lapidary-spec-#{RUBY_VERSION}"
     if ! FileTest.exists?(work_dir)
       Dir.mkdir(work_dir)
     end
