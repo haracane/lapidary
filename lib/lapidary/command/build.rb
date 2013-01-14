@@ -1,3 +1,4 @@
+# coding: utf-8
 module Lapidary
   # Lapidary sub-commands
   module Command

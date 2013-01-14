@@ -1,3 +1,4 @@
+# coding: utf-8
 if RUBY_VERSION <= '1.8.7'
 else
   require "simplecov"
