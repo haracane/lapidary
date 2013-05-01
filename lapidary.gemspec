@@ -5,11 +5,11 @@
 
 Gem::Specification.new do |s|
   s.name = "lapidary"
-  s.version = "0.2.3"
+  s.version = "0.2.4"
 
   s.required_rubygems_version = Gem::Requirement.new(">= 0") if s.respond_to? :required_rubygems_version=
   s.authors = ["Kenji Hara"]
-  s.date = "2013-01-14"
+  s.date = "2013-05-01"
   s.description = "Helper for creating RubyGem project"
   s.email = "haracane@gmail.com"
   s.executables = ["lapidary"]
