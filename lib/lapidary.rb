@@ -1,5 +1,6 @@
 # coding: utf-8
 require "logger"
+require "date"
 require "erb"
 require "lapidary/command/build"
 
