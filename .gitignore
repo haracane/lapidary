@@ -54,3 +54,4 @@ pkg
 # For bundler:
 Gemfile.lock
 
+vendor/bundle
