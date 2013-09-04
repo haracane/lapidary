@@ -9,7 +9,7 @@ gem "rspec", "~> 2.12.0"
 gem "yard", "~> 0.8.3"
 gem "redcarpet", "~> 2.2.2"
 gem "rdoc", "~> 3.12"
-gem "bundler", "~> 1.2.3"
+gem "bundler", ">= 1.2.3"
 gem "jeweler", "~> 1.8.4"
 if RUBY_VERSION <= '1.8.7'
   gem "rcov", "~> 1.0.0"
